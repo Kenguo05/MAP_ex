@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtWidgetsSE</class>
+ <widget class="QWidget" name="QtWidgetsSE">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>380</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>380</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>站点查询</string>
+  </property>
+  <widget class="QLabel" name="labeltitle">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>50</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>站点查询</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelfirst">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>120</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>起点</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelsecond">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>200</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>终点</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxStart">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>121</y>
+     <width>431</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxEnd">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>201</y>
+     <width>431</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonSearch">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>282</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonQuit">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>282</y>
+     <width>75</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonSearch</sender>
+   <signal>clicked()</signal>
+   <receiver>QtWidgetsSE</receiver>
+   <slot>inputloc()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonQuit</sender>
+   <signal>clicked()</signal>
+   <receiver>QtWidgetsSE</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxStart</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>QtWidgetsSE</receiver>
+   <slot>searchstart(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxEnd</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>QtWidgetsSE</receiver>
+   <slot>searchend(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>inputloc()</slot>
+  <slot>searchstart(QString)</slot>
+  <slot>searchend(QString)</slot>
+ </slots>
+</ui>
