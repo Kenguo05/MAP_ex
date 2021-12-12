@@ -171,8 +171,8 @@ MAP::MAP(QWidget* parent)
     m_Timer->setSingleShot(true);	                //定时器只执行一次
     connect(ui.action_open, SIGNAL(triggered(bool)), this, SLOT(loadmap()));
     connect(ui.action_exit, SIGNAL(triggered(bool)), this, SLOT(closewnd()));
-    connect(ui.action_leasttran, SIGNAL(triggered(bool)), this, SLOT(zszc()));
-    connect(ui.action_mindist, SIGNAL(triggered(bool)), this, SLOT(zdjl()));
+    connect(ui.action_leasttran, SIGNAL(triggered(bool)), this, SLOT(leasttran()));
+    connect(ui.action_mindist, SIGNAL(triggered(bool)), this, SLOT(mindist()));
     //以下Lambda表达式可以用自动类型推导代替,或用非成员函数的地址代替
     connect(m_Timer, &QTimer::timeout, this, [=]() {
         QList<QGraphicsItem*> listItem = ui.graphicsView->scene()->items();
